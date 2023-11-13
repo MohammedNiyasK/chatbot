@@ -17,7 +17,7 @@ const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
     origin: [
-      "https://chatbot-m49zghbsx-mohammedniyask.vercel.app",
+      "https://chatbot-orpin-nine.vercel.app",
       "http://localhost:5173",
     ],
   },
