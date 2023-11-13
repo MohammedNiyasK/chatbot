@@ -3,7 +3,7 @@ import { io } from "../index.js";
 import { Chat } from "../models/chat.model.js";
 
 const openai = new OpenAI({
-  apiKey: "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", // This is also the default, can be omitted
+  apiKey: process.env.API_KEY, 
 });
 
 export const createPost = async (req, res) => {
