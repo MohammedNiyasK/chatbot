@@ -10,14 +10,12 @@ import { URL } from "./constants.js";
 const app = express();
 
 app.use(
-  cors(
-    cors({
-      origin: [
-        "http://localhost:5173",
-        "https://chatbot-m49zghbsx-mohammedniyask.vercel.app",
-      ],
-    })
-  )
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://chatbot-m49zghbsx-mohammedniyask.vercel.app",
+    ],
+  })
 );
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
