@@ -30,6 +30,7 @@ app.get("/", (req, res) => {
 
 app.use("/", postRoutes);
 
+
 connectDB()
   .then(() => {
     httpServer.listen(process.env.PORT || 8000, () =>
