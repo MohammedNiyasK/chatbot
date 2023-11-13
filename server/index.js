@@ -5,25 +5,21 @@ import { Server } from "socket.io";
 import cors from "cors";
 import postRoutes from "./routes/chat.route.js";
 import { connectDB } from "./config/db.js";
-import { URL } from "./constants.js";
+
 
 const app = express();
 
-app.use(
-  cors({
-    origin: [
-      "http://localhost:5173",
-      "https://chatbot-m49zghbsx-mohammedniyask.vercel.app",
-    ],
-  })
-);
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: URL,
+    origin: [
+      "https://chatbot-m49zghbsx-mohammedniyask.vercel.app",
+      "http://localhost:5173",
+    ],
   },
 });
 
